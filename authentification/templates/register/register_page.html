@@ -1,0 +1,30 @@
+{% extends 'base_layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Page d'inscription -->
+<div class="container main">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <!-- Carte d'inscription -->
+      <div class="card  my-3 login__card">
+        <div class="card-body bg-transparent ">
+          <h4 class="card-subtitle text-center py-2"> Inscrivez-vous maintenant : </h4>
+          <!-- Formulaire d'inscription -->
+          <form method="post">
+              {% csrf_token %}
+                {{ form|crispy }}
+              <!-- Boutons de soumission et d'annulation -->
+              <div style="display: flex; justify-content: space-between;">
+                <button type="submit" class="btn btn-sm btn-primary margin-btn"> S'inscrire </button>
+                <!-- Lien d'annulation vers la page de connexion -->
+                <a href="{% url 'authentification:login' %}" role="button" class="btn btn-sm btn-secondary margin-btn"> Annuler </a>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin de la page d'inscription -->
+{% endblock %}

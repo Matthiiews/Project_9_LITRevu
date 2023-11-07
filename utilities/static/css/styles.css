@@ -1,0 +1,255 @@
+
+/* Styles for all screen sizes */
+/*  -- all pages for the fixed navbar --  */
+/* margin top under navbar */
+
+html {
+    background-image: url("../img/paper2.jpg");
+    background-size: 40%;
+    background-repeat: repeat;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+  
+body{
+    background: none;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 0px 0px;
+}
+
+a {
+    font-family: "typewriter_condensedregular";
+    color: #000;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+a:hover {
+    color: #c49b38;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid grey;
+    padding-bottom: 10px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-image: url("../img/paper2.jpg");
+    background-size: 40%;
+    background-repeat: repeat;
+    z-index: 10;
+    margin-bottom: 0px;
+}
+header .header__right {
+width: 25%;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: space-between;
+}
+header .header__center {
+display: flex;
+width: fit-content;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-left: auto;
+}
+header .header__left {
+    width: 25%;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+.header__left p{
+display: inline-block;
+min-width: fit-content;
+}
+header .logo{
+    width: 60px;
+    height: 60px;
+}
+
+.main {
+    padding-top: 10px;
+    margin-top: 0;
+}
+
+.divider__area{
+    z-index: 10 !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f1ac0c;
+    position: absolute;
+    transform: translateY(230%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacing__div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  
+    justify-content: space-between;
+}
+
+.login__card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+table, tbody, tr, th, td{
+    background-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+tr{
+    border-bottom: 1px solid gray;
+}
+
+.form input, .form label {
+    display: block;
+    font-family: "typewriter_condensedregular";
+    color: #000;
+}
+.form input {
+    width: 100%;
+    height: 35px;
+}
+.form label {
+    font-weight: bold;
+}
+.form .helptext, .form ul {
+    color: #c49b38;
+    font-size: small;
+}
+.form__search {
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.form__search input {
+    display: block;
+    width: 100%;
+    height: 35px;
+}
+
+.lined__up__form{
+    display: block;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.btnfitted_to_label{
+    width:max-content;
+    max-width:max-content;
+    padding: 0px 20px 0px 10px;
+    max-height: 40px;
+}
+
+.user-follower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+  
+.user-follower__user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px groove green;
+    border-left: 1px groove green;
+    border-right: 1px groove green;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items:baseline;
+     
+}
+
+.pull__to__right{
+    justify-content: space-between;
+}
+
+/*  -- login_page | register_page --  */
+/*  */
+.p-message {
+    margin-top: 1rem;
+    padding: 15px;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-btn {
+    margin-top: 20px;
+}
+
+/*  ----  feeds_page ----   */
+/*  -- Feeds headline and buttons  --  */
+.headline-feed {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/*  ---- abo_page ----  */
+/*  -- User inout to follow  --  */
+.user-input p {
+    width: 90%;
+    margin-left: 80px;
+    margin-top: -32px;
+}
+
+ /* Styles for screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    img {
+        width: 200px;
+    }
+  }
+
+ /* Styles for screens with a maximum width of 990px */
+  @media (max-width: 990px) {
+    .img-border {
+        border-radius: 3px;
+        object-fit: contain;
+        object-position: top;
+    }
+  }
+
+  /* Styles for screens with a minimum width of 990px */
+  @media (min-width: 990px) {
+    /*  ----  feeds_page ----   */
+    /*  -- Feeds headline and buttons  --  */
+    .img-border {
+        border: solid black 1px;
+        border-radius: 3px;
+    }
+  }
+
+  #div_id_rating{
+    margin: 15px 0px 15px 0px;
+    width: 98%;
+    display: flex;
+  }
+
+  #div_id_rating div{
+    margin-left: 15px;
+    width: 50%;
+    display: flex;
+  }

@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+{% load static stars %}
+
+{% block content %}
+<!-- feeds page -->
+<div class="container  main">
+  <div class="d-flex" style="display: flex;">
+    <div>
+      <h3 style="padding-left: 20px;"> Feeds </h3>
+    </div>
+    <div class="headline-feed">
+      <a class="btn btn-sm btn-primary m-1" href="{% url 'review:ask_review' %}" role="button"> Ask for a review </a>
+      <a class="btn  btn-sm  btn-primary m-1" href="{% url 'review:create_review' %}" role="button"> Create a review </a>
+    </div>
+  </div>
+  <hr>
+  <div class="container justify-content-center">
+    {% for post in posts %}
+      {% if post.type_of_content == 'REVIEW' %}
+        {% include 'feeds/review_page.html' %}
+      {% elif post.type_of_content == 'TICKET' %}
+        {% include 'feeds/ticket_page.html' %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<!-- End of feeds page -->
+{% endblock %}

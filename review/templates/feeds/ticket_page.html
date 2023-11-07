@@ -1,0 +1,22 @@
+{% load static stars %}
+
+<div class="container mt-3">
+  <div class="card border-dark my-3 w-80" style="background-color: #e3f2fd;">
+    <div class="card-body">
+      <p> posted by <strong>{{ post.user }}</strong> <small style="float: right;"> {{ post.time_created }} </small> </p>
+      <hr>
+      <div style="display: flex;">
+        <img src="{% get_media_prefix %}{{ post.image }}" alt="{{ post.title }}" class="img-fluid img-border" >
+        <div style="margin-left: 30px;">
+          <div style="margin-bottom: 15px;">
+            <h4> {{ post.title }} </h4>
+          </div>
+          <div>
+            <p class="card-text"> {{ post.description|linebreaks }} </p>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="{% url 'review:create_review_ticket' pk=post.id %}" role="button" style="margin-top: 20px;">Create a review</a>
+    </div>
+  </div>
+</div>

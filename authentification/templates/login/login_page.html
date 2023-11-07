@@ -1,0 +1,43 @@
+{% extends 'base_layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Page d'accueil : formulaire de connexion et d'inscription -->
+<div class="container main">
+  <div class="row justify-content-center" style="z-index:0;">
+    <!-- Colonne pour les éléments de connexion et d'inscription -->
+    <div class="col-md-6  d-flex justify-content-center" style="z-index:0;">
+      
+      <!-- Formulaire de connexion -->
+      <div class="card  my-3 col-6 login__card"  style="z-index:0;">
+        <div class="card-body bg-transparent px-4">
+          <h4 class="card-subtitle text-center py-2"> Connexion : </h4>
+          <form method="post">
+            {% csrf_token %}
+              {{ form|crispy }}
+            <div>
+              <button type="submit" class="btn btn-sm  btn-primary margin-btn"> Se connecter </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Séparateur entre les formulaires de connexion et d'inscription -->
+      <div class="divider__area">
+        <h4 class="card-subtitle text-center py-2"> Ou </h4>
+      </div>
+
+      <!-- Formulaire d'inscription -->
+      <div class="card  my-3 col-6 login__card" style="z-index:0;">
+        <div class="card-body bg-transparent text-center align-items-center">
+          <h4 class="card-subtitle py-2"> Inscrivez-vous maintenant : </h4>
+          <!-- Lien vers la page d'inscription -->
+          <a class="btn btn-sm btn-primary margin-btn" href="{% url 'authentification:register' %}" role="button"> S'inscrire </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fin de la page d'accueil -->
+{% endblock %}

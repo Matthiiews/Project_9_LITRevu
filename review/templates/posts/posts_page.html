@@ -1,0 +1,90 @@
+{% extends 'base_layout.html' %}
+{% load static stars %}
+
+{% block content %}
+<!-- posts page -->
+<div class="container main">
+  <div style="display: flex;">
+    <div class="d-flex" style="width:50%;">
+      <h3 style="display:inline-block; padding-left: 20px;"> {{ request.user }}'s Posts </h3>
+    </div>
+    <div class="headline-feed">
+      <a class="btn btn-sm btn-primary m-1" href="{% url 'review:ask_review' %}" role="button"> Ask for a review </a>
+      <a class="btn  btn-sm  btn-primary m-1" href="{% url 'review:create_review' %}" role="button"> Create a review </a>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container justify-content-center">
+    <form method="post">
+    {% csrf_token %}
+      {% for review in reviews %}
+        <div class="container mt-3">
+          <div class="card border-dark my-3 w-80" style="background-color: #e3f2fd;">
+            <div class="card-body">
+              <p> posted by <strong>{{ review.user }}</strong> <small style="float: right;"> {{ review.time_created }} </small> </p>
+              <hr>
+              <h4> {{ review.headline }} </h4>
+              <p>{{ review.rating|display_stars }}</p>
+              <p> {{ review.body|linebreaks }} </p>
+              <div class="card border-dark bg-light">
+                <div class="card-body">
+                  <p> posted by <strong>{{ review.ticket.user }}</strong> <small style="float: right;"> {{ review.ticket.time_created }} </small> </p>
+                  <hr>
+                  <div style="display: flex;">
+                    <img src="{% get_media_prefix %}{{ review.ticket.image }}" alt="{{ review.ticket.title }}" class="img-fluid img-border">
+                    <div style="margin-left: 30px;">
+                      <div style="margin-bottom: 15px;">
+                        <h4> {{ review.ticket.title }} </h4>
+                      </div>
+                      <div>
+                        <p> {{ review.ticket.description|linebreaks }} </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <a class="btn btn-primary" href="{% url 'review:posts_modify_review_page' pk=review.id %}" role="button" style="margin-top: 20px;"> Modify </a>
+                <a class="btn btn-danger" href="{% url 'review:posts_delete_page' pk=review.ticket.id %}" role="button" style="margin-top: 20px;"> Delete </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </form>
+
+    {% if reviews %}
+      <br>
+      <hr>
+      <br>
+    {% endif %}
+
+    <form method="post">
+    {% csrf_token %}
+      {% for ticket in tickets %}
+        <div class="container mt-3">
+          <div class="card border-dark my-3 w-80" style="background-color: #e3f2fd;">
+            <div class="card-body">
+              <p> posted by <strong>{{ ticket.user }}</strong> <small style="float: right;"> {{ ticket.time_created }} </small> </p>
+              <hr>
+              <div style="display: flex;">
+                <img src="{% get_media_prefix %}{{ ticket.image }}" alt="{{ ticket.title }}" class="img-fluid img-border" >
+                <div style="margin-left: 30px;">
+                  <div style="margin-bottom: 15px;">
+                    <h4> {{ ticket.title }} </h4>
+                  </div>
+                  <div>
+                    <p class="card-text"> {{ ticket.description|linebreaks }} </p>
+                  </div>
+                </div>
+              </div>
+                <a class="btn btn-primary" href="{% url 'review:posts_modify_ticket_page' pk=ticket.id %}" role="button" style="margin-top: 20px;"> Modify </a>
+                <a class="btn btn-danger" href="{% url 'review:posts_delete_page' pk=ticket.id %}" role="button" style="margin-top: 20px;"> Delete </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </form>
+  </div>
+</div>
+<!-- End of posts page -->
+{% endblock %}

@@ -1,0 +1,30 @@
+{% load static stars %}
+
+<div class="container mt-3">
+  <div class="card border-dark my-3 w-80" style="background-color: #e3f2fd;">
+    <div class="card-body">
+      <p> posted by <strong>{{ post.user }}</strong> <small style="float: right;"> {{ post.time_created }} </small> </p>
+      <hr>
+      <h4> {{ post.headline }} </h4>
+      <p> {{ post.rating|display_stars }} </p>
+      <p> {{ post.body|linebreaks }} </p>
+      <div class="card border-dark bg-light">
+        <div class="card-body">
+          <p> posted by <strong>{{ post.ticket.user }}</strong> <small style="float: right;"> {{ post.ticket.time_created }} </small> </p>
+          <hr>
+          <div style="display: flex;">
+            <img src="{% get_media_prefix %}{{ post.ticket.image }}" alt="{{ post.ticket.title }}" class="img-fluid img-border">
+            <div style="margin-left: 30px;">
+              <div style="margin-bottom: 15px;">
+                <h4> {{ post.ticket.title }} </h4>
+              </div>
+              <div>
+                <p> {{ post.ticket.description|linebreaks }} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

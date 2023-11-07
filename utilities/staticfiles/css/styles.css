@@ -1,0 +1,67 @@
+
+/* Styles for all screen sizes */
+/*  -- all pages for the fixed navbar --  */
+/* margin top under navbar */
+.main {
+    padding-top: 10px;
+}
+
+/*  -- login_page | register_page --  */
+/*  */
+.p-message {
+    margin-top: 1rem;
+    padding: 15px;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-btn {
+    margin-top: 20px;
+}
+
+/*  ----  feeds_page ----   */
+/*  -- Feeds headline and buttons  --  */
+.headline-feed {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 100%;
+}
+
+/*  ---- abo_page ----  */
+/*  -- User inout to follow  --  */
+.user-input p {
+    width: 90%;
+    margin-left: 80px;
+    margin-top: -32px;
+}
+
+ /* Styles for screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    img {
+        width: 200px;
+    }
+  }
+
+ /* Styles for screens with a maximum width of 990px */
+  @media (max-width: 990px) {
+    .img-border {
+        border-radius: 3px;
+        object-fit: contain;
+        object-position: top;
+    }
+  }
+
+  /* Styles for screens with a minimum width of 990px */
+  @media (min-width: 990px) {
+    /*  ----  feeds_page ----   */
+    /*  -- Feeds headline and buttons  --  */
+    .img-border {
+        border: solid black 1px;
+        border-radius: 3px;
+    }
+  }
+

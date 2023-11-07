@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- create review page -->
+<div class="container main">
+  <div class="row justify-content-center">
+    <div class="col-md-9">
+      <div class="card border-dark my-3" style="background-color: #e3f2fd;">
+        <div class="card-body bg-transparent ">
+          <h4 class="card-subtitle text-center py-2"> Create a review: </h4>
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+              {{ ask_review_form|crispy }}
+              <hr>
+              {{ create_review_form|crispy }}
+            <div style="display: flex; justify-content: space-between;">
+              <button type="submit" class="btn btn-primary margin-btn"> Create this review </button>
+              <a href="{% url 'review:feeds_page' %}" role="button" class="btn btn-secondary margin-btn"> Cancel </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of create review page -->
+{% endblock %}
