@@ -10,7 +10,7 @@ from .models import User, UserFollows
 
 
 def signup_page_view(request):
-    """register view"""
+    """Vue pour l'inscription d'un utilisateur."""
 
     if request.method == "POST":
         form = SignupForm(request.POST)
@@ -28,7 +28,7 @@ def signup_page_view(request):
 
 
 def login_page_view(request):
-    """login to user interface"""
+    """Vue pour la connexion à l'interface utilisateur."""
 
     if request.method == "POST":
         form = LoginForm(request.POST)
@@ -53,7 +53,7 @@ def login_page_view(request):
 
 
 def logout_page_view(request):
-    """logout from user interface"""
+    """Vue pour la déconnexion de l'interface utilisateur."""
 
     logout(request)
     return redirect("authentification:login")
@@ -62,8 +62,9 @@ def logout_page_view(request):
 # Page d'abonnement
 @login_required
 def abo_page_view(request, user):
-    """abo page, with follow and unfollow logic, see which users is following
-    request.user"""
+    """Vue de la page d'abonnement avec la logique de suivi et de
+    désabonnement, affichage des utilisateurs suivis par request.user.
+    """
     search_form = SearchUser()
     searched_user_resp = ""
     requested_user = User.objects.get(username=user)

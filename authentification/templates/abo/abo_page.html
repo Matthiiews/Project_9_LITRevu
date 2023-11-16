@@ -45,18 +45,8 @@
         <!-- Liste des utilisateurs suivis par l'utilisateur courant -->
         <h3> {{ request.user }} is following :</h3>
         {% for followed_user in followed_users %}
-        <!-- <table class="table ">
-          <tbody>
-            <tr>
-              <td class="spacing__div"> 
-                
-                  <span>{{ followed_user.followed_user.username }} </span>
-                  <button type="submit" class="btn btn-warning btn-sm btnfitted_to_label pull__to__right" 
-                  name="unfollow" value="{{ followed_user.followed_user.id }}" style="margin: 3px"> Se Désabonner </button>
-              </td>
-            </tr>
-          </tbody>
-        </table> -->
+       
+        <!-- Détails de l'utilisateur suivi -->
         <div class="spacing__div">
           <span>{{ followed_user.followed_user.username }} </span>
                   <button type="submit" class="btn btn-warning btn-sm btnfitted_to_label pull__to__right" 
@@ -75,13 +65,7 @@
         <!-- Liste des utilisateurs qui suivent l'utilisateur courant -->
         <h3> You are being followed by: </h3>
         {% for user in followed_by_others %}
-          <!-- <table class="table ">
-            <tbody>
-              <tr>
-                <td> {{ user.user.username }} </td>
-              </tr>
-            </tbody>
-          </table> -->
+          
           <div class="spacing__div">
             {{ user.user.username }}
           </div>
