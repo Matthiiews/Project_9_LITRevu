@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os.path
 
-from dotenv import load_dotenv
+
 from django.contrib.messages import constants as messages
 from pathlib import Path
 
@@ -29,7 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # to keep the SECRET_KEY secret, saved in .env
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-a-mxu25n1g(xm_^*_vx7o2&g)ajrspxo$u!=f=^3$=tm41^i&h"
+SECRET_KEY = \
+    "django-insecure-a-mxu25n1g(xm_^*_vx7o2&g)ajrspxo$u!=f=^3$=tm41^i&h"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -102,7 +103,8 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME":
+        "django.contrib.auth.password_validation.MinimumLengthValidator",
         "OPTIONS": {
             "min_length": 8,
         },

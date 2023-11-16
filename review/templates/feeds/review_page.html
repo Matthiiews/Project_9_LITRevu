@@ -5,7 +5,7 @@
     <div class="card-body">
       <p> posted by <strong>{{ post.user }}</strong> <small style="float: right;"> {{ post.time_created }} </small> </p>
       <hr>
-      <h4> {{ post.headline }} </h4>
+      <h3> {{ post.headline }} </h3>
       <p> {{ post.rating|display_stars }} </p>
       <p> {{ post.body|linebreaks }} </p>
       <div class="card border-dark bg-light">
@@ -16,7 +16,7 @@
             <img src="{% get_media_prefix %}{{ post.ticket.image }}" alt="{{ post.ticket.title }}" class="img-fluid img-border">
             <div style="margin-left: 30px;">
               <div style="margin-bottom: 15px;">
-                <h4> {{ post.ticket.title }} </h4>
+                <h3> {{ post.ticket.title }} </h3>
               </div>
               <div>
                 <p> {{ post.ticket.description|linebreaks }} </p>

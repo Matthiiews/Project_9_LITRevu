@@ -20,10 +20,12 @@
 
 <header>
   <div class="header__right">
-  </div> 
-  <a href="{% if user.is_authenticated %}{% url 'review:feeds_page' %}{% else %}{% url 'authentification:login' %}{% endif %}">
+  </div>
+  <a href="#"> 
+  <!-- <a href="{% if user.is_authenticated %}{% url 'review:feeds_page' %}{% else %}{% url 'authentification:login' %}{% endif %}"> -->
+    
       <div class="header__center">
-          <img class="logo" src="{% static 'img/logo_black.png' %}">
+          <img class="logo" src="{% static 'img/logo_black.png' %}" alt="LITRevu_logo">
           <h1>LITReviews</h1>
       </div>
   </a>

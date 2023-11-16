@@ -8,7 +8,7 @@
     <div class="col-md-9">
       <div class="card border-dark my-3" style="background-color: #e3f2fd;">
         <div class="card-body bg-transparent ">
-          <h4 class="card-subtitle text-center py-2"> Modify a review: </h4>
+          <h2 class="card-subtitle text-center py-2"> Modify a review: </h2>
           <form method="post" enctype="multipart/form-data">
           {% csrf_token %}
             {{ review_form|crispy }}
@@ -24,7 +24,7 @@
                     <img src="{% get_media_prefix %}{{ instance_review.ticket.image }}" alt="{{ instance_review.ticket.title }}" class="img-fluid img-border">
                     <div style="margin-left: 30px;">
                       <div style="margin-bottom: 15px;">
-                        <h4> {{ instance_review.ticket.title }} </h4>
+                        <h2> {{ instance_review.ticket.title }} </h2>
                       </div>
                       <div>
                         <p> {{ instance_review.ticket.description }} </p>

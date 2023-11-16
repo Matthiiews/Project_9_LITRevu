@@ -6,11 +6,13 @@
 <div class="container main">
   <div style="display: flex;">
     <div class="d-flex" style="width:50%;">
-      <h3 style="display:inline-block; padding-left: 20px;"> {{ request.user }}'s Posts </h3>
+      <h2 style="display:inline-block; padding-left: 20px;"> {{ request.user }}'s Posts </h2>
     </div>
     <div class="headline-feed">
-      <a class="btn btn-sm btn-primary m-1" href="{% url 'review:ask_review' %}" role="button"> Ask for a review </a>
-      <a class="btn  btn-sm  btn-primary m-1" href="{% url 'review:create_review' %}" role="button"> Create a review </a>
+      <a class="btn btn-sm btn-primary m-1" href="{% url 'review:ask_review' %}" 
+      role="button"> Ask for a review </a>
+      <a class="btn  btn-sm  btn-primary m-1" href="{% url 'review:create_review' %}" 
+      role="button"> Create a review </a>
     </div>
   </div>
 
@@ -24,7 +26,7 @@
             <div class="card-body">
               <p> posted by <strong>{{ review.user }}</strong> <small style="float: right;"> {{ review.time_created }} </small> </p>
               <hr>
-              <h4> {{ review.headline }} </h4>
+              <h3> {{ review.headline }} </h3>
               <p>{{ review.rating|display_stars }}</p>
               <p> {{ review.body|linebreaks }} </p>
               <div class="card border-dark bg-light">
@@ -35,7 +37,7 @@
                     <img src="{% get_media_prefix %}{{ review.ticket.image }}" alt="{{ review.ticket.title }}" class="img-fluid img-border">
                     <div style="margin-left: 30px;">
                       <div style="margin-bottom: 15px;">
-                        <h4> {{ review.ticket.title }} </h4>
+                        <h3> {{ review.ticket.title }} </h3>
                       </div>
                       <div>
                         <p> {{ review.ticket.description|linebreaks }} </p>
@@ -44,8 +46,10 @@
                   </div>
                 </div>
               </div>
-                <a class="btn btn-primary" href="{% url 'review:posts_modify_review_page' pk=review.id %}" role="button" style="margin-top: 20px;"> Modify </a>
-                <a class="btn btn-danger" href="{% url 'review:posts_delete_page' pk=review.ticket.id %}" role="button" style="margin-top: 20px;"> Delete </a>
+                <a class="btn btn-primary" href="{% url 'review:posts_modify_review_page' pk=review.id %}" 
+                role="button" style="margin-top: 20px;"> Modify </a>
+                <a class="btn btn-danger" href="{% url 'review:posts_delete_page' pk=review.ticket.id %}" 
+                role="button" style="margin-top: 20px;"> Delete </a>
             </div>
           </div>
         </div>
@@ -70,15 +74,17 @@
                 <img src="{% get_media_prefix %}{{ ticket.image }}" alt="{{ ticket.title }}" class="img-fluid img-border" >
                 <div style="margin-left: 30px;">
                   <div style="margin-bottom: 15px;">
-                    <h4> {{ ticket.title }} </h4>
+                    <h3> {{ ticket.title }} </h3>
                   </div>
                   <div>
                     <p class="card-text"> {{ ticket.description|linebreaks }} </p>
                   </div>
                 </div>
               </div>
-                <a class="btn btn-primary" href="{% url 'review:posts_modify_ticket_page' pk=ticket.id %}" role="button" style="margin-top: 20px;"> Modify </a>
-                <a class="btn btn-danger" href="{% url 'review:posts_delete_page' pk=ticket.id %}" role="button" style="margin-top: 20px;"> Delete </a>
+                <a class="btn btn-primary" href="{% url 'review:posts_modify_ticket_page' pk=ticket.id %}" 
+                role="button" style="margin-top: 20px;"> Modify </a>
+                <a class="btn btn-danger" href="{% url 'review:posts_delete_page' pk=ticket.id %}" 
+                role="button" style="margin-top: 20px;"> Delete </a>
             </div>
           </div>
         </div>

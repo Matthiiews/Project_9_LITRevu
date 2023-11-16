@@ -14,9 +14,10 @@ from .models import Ticket, Review
 # feeds page
 @login_required
 def feeds_page_view(request):
-    """the general feeds page with all reviews of users which I follow,
-    my reviews and reviews of user how are following me
-    displays all tickets, without any review, of users I am following
+    """"La page générale des flux affiche toutes les critiques des
+    utilisateurs que je suis, mes propres critiques ainsi que les critiques
+    des utilisateurs qui me suivent. Elle affiche également tous les billets
+    sans aucune critique, des utilisateurs que je suis en train de suivre.
     """
 
     reviews = (
@@ -46,8 +47,10 @@ def feeds_page_view(request):
 
 @login_required
 def ask_review_view(request):
-    """button 'Ask for a review' on feeds and posts page
-    - create a new Ticket which can be reviewed"""
+    """"Le bouton 'Demander une critique' sur la page des flux et
+    des publications
+    - crée un nouveau ticket pouvant être examiné.
+    """
 
     if request.method == "POST":
         form = TicketForm(request.POST, request.FILES)
@@ -68,8 +71,9 @@ def ask_review_view(request):
 
 @login_required
 def create_review_view(request):
-    """button 'Create a review' on feeds and posts page
-    - creates a Review which includes a new Ticket"""
+    """"Bouton 'Créer une critique' sur la page des flux et des publications
+    - crée une critique qui inclut un nouveau ticket.
+    """
 
     if request.method == "POST":
         ask_review_form = TicketForm(request.POST, request.FILES)
