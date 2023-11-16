@@ -24,17 +24,20 @@
         <div class="container mt-3">
           <div class="card border-dark my-3 w-80" style="background-color: #e3f2fd;">
             <div class="card-body">
-              <p> posted by <strong>{{ review.user }}</strong> <small style="float: right;"> {{ review.time_created }} </small> </p>
+              <p> posted by <strong>{{ review.user }}</strong> <small style="float: right;"> 
+                {{ review.time_created }} </small> </p>
               <hr>
               <h3> {{ review.headline }} </h3>
               <p>{{ review.rating|display_stars }}</p>
               <p> {{ review.body|linebreaks }} </p>
               <div class="card border-dark bg-light">
                 <div class="card-body">
-                  <p> posted by <strong>{{ review.ticket.user }}</strong> <small style="float: right;"> {{ review.ticket.time_created }} </small> </p>
+                  <p> posted by <strong>{{ review.ticket.user }}</strong> <small style="float: right;"> 
+                    {{ review.ticket.time_created }} </small> </p>
                   <hr>
                   <div style="display: flex;">
-                    <img src="{% get_media_prefix %}{{ review.ticket.image }}" alt="{{ review.ticket.title }}" class="img-fluid img-border">
+                    <img src="{% get_media_prefix %}{{ review.ticket.image }}" alt="{{ review.ticket.title }}" 
+                    class="img-fluid img-border">
                     <div style="margin-left: 30px;">
                       <div style="margin-bottom: 15px;">
                         <h3> {{ review.ticket.title }} </h3>
@@ -68,10 +71,12 @@
         <div class="container mt-3">
           <div class="card border-dark my-3 w-80" style="background-color: #e3f2fd;">
             <div class="card-body">
-              <p> posted by <strong>{{ ticket.user }}</strong> <small style="float: right;"> {{ ticket.time_created }} </small> </p>
+              <p> posted by <strong>{{ ticket.user }}</strong> <small style="float: right;"> 
+                {{ ticket.time_created }} </small> </p>
               <hr>
               <div style="display: flex;">
-                <img src="{% get_media_prefix %}{{ ticket.image }}" alt="{{ ticket.title }}" class="img-fluid img-border" >
+                <img src="{% get_media_prefix %}{{ ticket.image }}" alt="{{ ticket.title }}" 
+                class="img-fluid img-border" >
                 <div style="margin-left: 30px;">
                   <div style="margin-bottom: 15px;">
                     <h3> {{ ticket.title }} </h3>

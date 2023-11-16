@@ -10,10 +10,12 @@
       <p> {{ post.body|linebreaks }} </p>
       <div class="card border-dark bg-light">
         <div class="card-body">
-          <p> posted by <strong>{{ post.ticket.user }}</strong> <small style="float: right;"> {{ post.ticket.time_created }} </small> </p>
+          <p> posted by <strong>{{ post.ticket.user }}</strong> <small style="float: right;"> 
+            {{ post.ticket.time_created }} </small> </p>
           <hr>
           <div style="display: flex;">
-            <img src="{% get_media_prefix %}{{ post.ticket.image }}" alt="{{ post.ticket.title }}" class="img-fluid img-border">
+            <img src="{% get_media_prefix %}{{ post.ticket.image }}" alt="{{ post.ticket.title }}" 
+            class="img-fluid img-border">
             <div style="margin-left: 30px;">
               <div style="margin-bottom: 15px;">
                 <h3> {{ post.ticket.title }} </h3>
