@@ -1,6 +1,6 @@
 # LitReview
 
-![LITRevu](static/logo_black.png)
+![LITRevu](utilities/static/img/logo_black.png)
 
 ## Objectif
 Ce programme est un exercice proposé par [OpenClassRooms](https://openclassrooms.com/fr/) dans le cadre de la formation :
@@ -28,7 +28,7 @@ L'application MVP LitReview permet de :
 * -> Installer la dernière version de pip: python -m pip install --upgrade pip
 * -> Installer les bibliothèques externes de Python: pip install -r requirements.txt
 
-## Installation: 
+## Installation 
 Ouvrir le terminal et exécutez les actions suivantes:
 
 1. `git clone https://github.com/Matthiiews/Project_9_LITRevu.git
@@ -44,7 +44,7 @@ Ouvrir le terminal et exécutez les actions suivantes:
 * -> Pour accéder à l'administration de django: http://127.0.0.1:8000/admin
 * -> Pour créer un nouvel administrateur dans le terminal: python manage.py createsuperuser
 
-## Visualisation du projet:
+## Visualisation du projet
 1. Page d'accueil avec lien pour s'inscrire et se connecter: <br>
 ![login](/README_images/login.png)
 
