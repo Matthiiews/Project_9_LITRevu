@@ -1,20 +1,36 @@
-# LITRevu-project
-## Description:
-Project 9 OpenClassrooms Path - LITRevu -- develop a Web application using Django  -- using function based views
+# LitReview
 
-This application has a user interphase, you can sign up and login into your account. The "feeds" page 
-displays all reviews and tickets created from all users. The first part are the reviews and the lower 
-part are the created tickets, which are waiting to get a review. On the "feeds" page and on the "posts" 
-page there are the buttons to create a review ("Create a review") and to create a ticket ("Ask for a review"). 
-The tap "posts" includes all reviews and tickets which the logged-in user has created. The user can modify 
-and delete their own reviews and tickets. On the "abo" page you can search for a user and follow them. 
-Below the following part you can unfollow the user you are following. And on the bottom you see the 
-user which are following you. 
+![LITRevu](static/logo_black.png)
 
-This application is using Python, Django and Bootstrap.
+## Objectif
+Ce programme est un exercice proposé par [OpenClassRooms](https://openclassrooms.com/fr/) dans le cadre de la formation :
+Développeur d'applications Python. L'objectif est de développer une application web permettant aux utilisateurs de consulter ou de solliciter une critique de livres à la demande.
+
+Cette application utilise Python, Django et Bootstrap.
+
+## Fonctionnalités
+L'application MVP LitReview permet de :
+* -> s'inscrire en tant que nouvel utilisateur
+* -> se connecter
+* -> creer une demande de critique de livre ou d'article.
+* -> publier une critique liée à une demande ou spontannée.
+* -> modifier ou supprimer ses publications
+* -> suivre les autres utilisateurs via un système d'abonnement.
+
+## Technologie utilisée
+* Le projet est développé avec le framework Django. 
+* Les données sont sauvegardées dans une base de données sqlite3.
+
+## Creation d'un environnement virtuel
+* -> Télécharger le package de l'application depuis github : git clone https://github.com/Matthiiews/Project_9_LITRevu.git
+* -> Creer un environnement virtuel : python -m venv .venv
+* -> Activer l'environnement virtuel : .venv\Scripts\activate.bat
+* -> Installer la dernière version de pip: python -m pip install --upgrade pip
+* -> Installer les bibliothèques externes de Python: pip install -r requirements.txt
 
 ## Installation: 
-open terminal
+Ouvrir le terminal et exécutez les actions suivantes:
+
 1. `git clone https://github.com/Matthiiews/Project_9_LITRevu.git
 2. `cd LITRevu-project`
 3. `python3 -m venv venv`
@@ -22,24 +38,25 @@ open terminal
 5. `pip install -r requirements.txt`
 6. `python manage.py runserver`
 
-### Skills:
-- Using server-side rendering in Django
-- Keeping a technology watch
-- Develop a web application using Django
+* -> Depuis votre navigateur, vous accédez à l'application via : http:/127.0.0.1:8000
+* -> Créez un compte pour pouvoir vous connecter et accéder au site.
+* -> Le mot de passe doit avoir au moins 8 caractères, des chiffres dans le désordre et des lettres. Il ne doit pas être commun.
+* -> Pour accéder à l'administration de django: http://127.0.0.1:8000/admin
+* -> Pour créer un nouvel administrateur dans le terminal: python manage.py createsuperuser
 
-## Visualisation of the project:
-1. home page with link to register and login: <br>
+## Visualisation du projet:
+1. Page d'accueil avec lien pour s'inscrire et se connecter: <br>
 ![login](/README_images/login.png)
 
-2. after register or login, you will be redirected to feeds: <br>
+2. Après vous être inscrit ou connecté, vous serez redirigé vers les flux des données: <br>
 ![feeds](/README_images/feeds.png)
 
-3. the next tab is: posts, where you find your tickets and reviews <br>
+3. L'onglet suivant est : posts, où vous trouverez vos billets et vos commentaires: <br>
 ![posts](/README_images/posts.png)
 
-4. finally, the abo page, where the follow and unfollow part is happening: <br>
+4. Enfin, la page de l'abo, où se déroule la partie "Suivre" et "Ne plus suivre": <br>
 ![abo](/README_images/abo.png)
 
-if you do not want to register, try:<br>
+Si vous ne souhaitez pas vous inscrire, essayez les codes ci-dessous:<br>
 username: Little <br>
-password: TS3cret01*
+password: S3cret01*
