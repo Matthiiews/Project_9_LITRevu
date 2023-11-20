@@ -15,7 +15,7 @@ This application is using Python, Django and Bootstrap.
 
 ## Installation: 
 open terminal
-1. `git clone https://github.com/Matthiiews/Project_9_Matthiews.git
+1. `git clone https://github.com/Matthiiews/Project_9_LITRevu.git
 2. `cd LITRevu-project`
 3. `python3 -m venv venv`
 4. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
