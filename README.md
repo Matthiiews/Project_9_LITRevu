@@ -1,13 +1,11 @@
 # LITRevu
 
-============
+![LITRevu](utilities/static/img/logo_black.png)
 
 [![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-
-![LITRevu](utilities/static/img/logo_black.png)
 
 ## Objectif
 
