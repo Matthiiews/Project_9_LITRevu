@@ -1,9 +1,9 @@
-[![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com) 
+# LITRevu
+
+[![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-
-# LitReview
 
 ![LITRevu](utilities/static/img/logo_black.png)
 
@@ -57,18 +57,18 @@ Ouvrir le terminal et exécutez les actions suivantes:
 
 ## Visualisation du projet
 
-1. Page d'accueil avec lien pour s'inscrire et se connecter.
-![login](/README_images/login.png).
+1. Page d'accueil avec lien pour s'inscrire et se connecter:
+![login](/README_images/login.png)
 
-2. Après vous être inscrit ou connecté, vous serez redirigé vers les flux des données: <br>
+2. Après vous être inscrit ou connecté, vous serez redirigé vers les flux des données:
 ![feeds](/README_images/feeds.png)
 
-3. L'onglet suivant est : posts, où vous trouverez vos billets et vos commentaires: <br>
+3. L'onglet suivant est : posts, où vous trouverez vos billets et vos commentaires:
 ![posts](/README_images/posts.png)
 
-4. Enfin, la page de l'abo, où se déroule la partie "Suivre" et "Ne plus suivre": <br>
+4. Enfin, la page de l'abo, où se déroule la partie "Suivre" et "Ne plus suivre":
 ![abo](/README_images/abo.png)
 
-Si vous ne souhaitez pas vous inscrire, essayez les codes ci-dessous: <br>
-username: Little <br>
+Si vous ne souhaitez pas vous inscrire, essayez les codes ci-dessous:
+username: Little
 password: S3cret01*
