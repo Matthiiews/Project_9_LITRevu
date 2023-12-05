@@ -14,6 +14,7 @@ class User(AbstractUser):
 class UserFollows(models.Model):
     """Modèle pour gérer les relations de suivi entre utilisateurs."""
 
+    # Définition des métadonnées du modèle
     class Meta:
         verbose_name = "UserFollow"
         verbose_name_plural = "UserFollows"
@@ -23,7 +24,8 @@ class UserFollows(models.Model):
     user = models.ForeignKey(
         "authentification.User",
         on_delete=models.CASCADE,
-        related_name="following",
+        related_name="following",  # Utilisé pour accéder aux relations de
+        # suivi depuis un utilisateur
         verbose_name=_("user"),
     )
 
@@ -31,9 +33,11 @@ class UserFollows(models.Model):
     followed_user = models.ForeignKey(
         "authentification.User",
         on_delete=models.CASCADE,
-        related_name="followed_by",
+        related_name="followed_by",  # Utilisé pour accéder aux relations de
+        # suivi pour un utilisateur suivi
         verbose_name=_("follower"),
     )
 
+    # Méthode spéciale pour afficher une représentation textuelle de l'objet
     def __str__(self):
         return f"{self.user} - is following: {self.followed_user}"
